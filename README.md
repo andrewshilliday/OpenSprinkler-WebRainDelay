@@ -43,7 +43,12 @@ Configure raindelay.sh:
 + Open raindelay.sh in your favorite editor
 
 + Set the variables following variables
-  + ```loc``` - the WOEID of your Yahoo Weather location. Go [here](http://developer.yahoo.com/weather/) for more information.
+  + ```loc``` - the WOEID of your Yahoo Weather location. Go [here](http://developer.yahoo.com/weather/) for more information. UPDATE: I've added a helper script (get_woeid.sh) to obtain the woeid for your location. Just run it with the desired location as the only argument. For example:
+
+```
+> ./get_woeid.sh "Washington, DC"
+2514815   Washington, DC
+```
   
   + ```os``` - the URL for the interval program running on your OpenSprinkler or OSPi (this should be the URL you can browse to interface with the device).
 

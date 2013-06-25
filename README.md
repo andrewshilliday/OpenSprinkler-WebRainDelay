@@ -65,12 +65,10 @@ Configure the delays:
   indicates that a 48 hour delay will be imposed when sever thunderstorms are encountered.
 
 + If the delay is left blank (as in the following), no change will be sent to the OpenSprinkler.  Any existing delays will remain intact.
-
-  ``` 19,dust,```
+  + ```19,dust,```
   
 + To force that any existing delay is canceled when a condition occurs, put a zero in the thrid column, as in
-
-  ```36,hot,0```
+  + ```36,hot,0```
 
 Scheduling the script to run:
 ---------

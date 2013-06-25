@@ -27,7 +27,7 @@ xsl="yahoo_weather.xslt"
 csv="yahoo_weather.csv"
 url="http://weather.yahooapis.com/forecastrss?w=$loc"
 pushd $dir > /dev/null
-code=`xsltproc $xsl "$url"`
+code=`curl "$url" | xsltproc $xsl -`
 delay=`grep "^${code}," "$csv" | cut -d , -f 3`
 [[ -z "$delay" ]] || curl "${os}/cv?pw=${pw}&rd=$delay"
 popd > /dev/null

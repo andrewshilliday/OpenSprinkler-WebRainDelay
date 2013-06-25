@@ -20,10 +20,28 @@ Dependencies:
 
 + xsltproc (for parsing the response from the Yahoo Weather API)
 
-Setup:
-------
+Install:
+-------
++ You first need a working OpenSprinkler setup that you can access via a browser
+  + For further information please refer to the OpenSprinkler online user manual available on [Ray's Website](http://rayshobby.net/?page_id=192)
 
-+ Install dependencies (all but xsltproc are installed by default on Raspbian)
-  + sudo apt-get install bash curl grep xsltproc
++ Install prerequisites (all but xsltproc are installed by default on Raspbian)
+  + ```sudo apt-get install bash curl grep xsltproc```
 
++ Create the directory you wish to place the files in (ex. /home/pi/webraindelay)
+  + ```mkdir /home/pi/webraindelay```
 
++ Download the files using git:
+  + ```git clone https://github.com/andrewshilliday/OpenSprinkler-WebRainDelay.git /home/pi/webraindelay```
+
++ Ensure that raindelay.sh is executable
+  + ```sudo chmod a+x /home/pi/webraindelay/raindelay.sh```
+
+Configure raindelay.sh:
+________________
+
++ Open raindelay.sh in your favorite editor
+
++ Set the variables following variables
+  + ```loc``` (this should be set to the ID of your Yahoo Weather location)
+  
